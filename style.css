@@ -1,0 +1,75 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Dancing+Script&family=Lobster&family=PT+Sans&family=Source+Serif+4:wght@200&display=swap');
+section {
+    margin-top: 2.6%;
+}
+
+.added {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    place-items: center;
+    margin: 34px 0px;
+}
+
+.edit {
+    margin-right: 6px;
+}
+
+.edited {
+    padding: 5px 10px;
+    width: 38pc;
+}
+
+#add:hover {
+    background-color: black;
+    color: white;
+}
+
+h4 {
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+i {
+    color: white;
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+i:hover {
+    color: rgb(192, 190, 190);
+    transform: translateX(20%);
+}
+
+.form-control {
+    transition: 0.5s all ease-in-out;
+}
+
+.form-control:hover {
+    background-color: rgb(228, 218, 218);
+}
+
+nav {
+    font-family: 'Averia Sans Libre', cursive;
+    letter-spacing: 1.4;
+    line-height: 1.4;
+}
+
+.navbar-brand {
+    font-family: 'PT Sans';
+}
+
+input {
+    font-family: 'Dancing Script', cursive;
+}
+
+#inputmenu {
+    padding: 10px 9px;
+}
