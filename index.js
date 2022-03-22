@@ -23,7 +23,6 @@ function input(e) {
 
         main.appendChild(newSec);
         input.value = '';
-        input.setAttribute('autofocus', '1')
     } else {
 
         input.style.backgroundColor = 'red';
@@ -67,10 +66,9 @@ function deleter() {
 }
 
 function editer(e) {
-    let writtenValue = e.target.value
-    writtenValue = inputMenu.value;
+    let h4 = e.target.parentElement.parentElement.previousSibling.previousSibling.innerHTML;
     e.target.parentElement.parentElement.parentElement.innerHTML =
-        `    <input type="text" value="${writtenValue}" class="edited"></input>
+        `    <input type="text" value="${h4}" class="edited"></input>
                 <div class="btn-container">
                     <a class="update"><i class="fa-solid fa-right-long fa-xl"></i></a>
                 </div>
