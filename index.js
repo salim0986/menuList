@@ -8,14 +8,14 @@ function input(e) {
     let writtenValue = e.target.value;
     writtenValue = inputMenu.value;
     let newSec = document.createElement('section');
+    newSec.className = "container added";
 
-    newSec.innerHTML = `  <section class="container added">
+    newSec.innerHTML = `  
             <h4>${writtenValue}</h4>
             <div class="btn-container">
                 <a class="edit"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
                 <a class="remove"><i class="fa-solid fa-trash fa-lg"></i></a>
             </div>
-        </section>                        
             `
     let input = this.previousSibling.previousSibling;
     let str = this.previousSibling.previousSibling.value;
