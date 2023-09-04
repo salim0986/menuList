@@ -5,7 +5,7 @@ addBtn.addEventListener('click', input)
 
 function input(e) {
 
-    let writtenValue = e.target.value;
+    let writtenValue = this.value;
     writtenValue = inputMenu.value;
     let newSec = document.createElement('section');
     newSec.className = "container added";
@@ -45,7 +45,7 @@ inputMenu.addEventListener('keydown', function(e) {
         let writtenValue = e.target.value
         writtenValue = inputMenu.value;
         let newSec = document.createElement('section');
-        newSec.innerHTML = `  <section class="container   added">
+        newSec.innerHTML = `  <section class="container added">
                 <h4>${writtenValue}</h4>
                 <div class="btn-container">
                     <a class="edit"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
@@ -62,12 +62,12 @@ inputMenu.addEventListener('keydown', function(e) {
 });
 
 function deleter() {
-    (this.parentElement.parentElement.parentElement).remove()
+    (this.parentElement.parentElement).remove()
 }
 
 function editer(e) {
-    let h4 = e.target.parentElement.parentElement.previousSibling.previousSibling.innerHTML;
-    e.target.parentElement.parentElement.parentElement.innerHTML =
+    let h4 = this.parentElement.parentElement.previousSibling.previousSibling.innerHTML;
+    this.parentElement.parentElement.parentElement.innerHTML =
         `    <input type="text" value="${h4}" class="edited"></input>
                 <div class="btn-container">
                     <a class="update"><i class="fa-solid fa-right-long fa-xl"></i></a>
