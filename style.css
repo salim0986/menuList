@@ -41,6 +41,8 @@ h1{
 h4 {
     color: white;
     font-family: 'Lobster', cursive;
+    width: 90%;
+    word-wrap: break-word;
 }
 
 i {
