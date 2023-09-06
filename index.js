@@ -36,7 +36,7 @@ function input(e) {
     delBtn.forEach(elem => elem.addEventListener('click', deleter));
 
     let editBtn = document.querySelectorAll('.edit');
-    editBtn.forEach(elem => elem.addEventListener('click', editer))
+    editBtn.forEach(elem => elem.addEventListener('click', editor))
 };
 
 inputMenu.addEventListener('keydown', function(e) {
@@ -65,7 +65,7 @@ function deleter() {
     (this.parentElement.parentElement).remove()
 }
 
-function editer(e) {
+function editor(e) {
     let h4 = this.parentElement.parentElement.previousSibling.previousSibling.innerHTML;
     this.parentElement.parentElement.parentElement.innerHTML =
         `    <input type="text" value="${h4}" class="edited"></input>
@@ -83,10 +83,11 @@ function editer(e) {
                 <div class="btn-container">
                     <a class="edit"><i class="fa-solid fa-pen-to-square fa-lg"></i></a>
                     <a class="remove"><i class="fa-solid fa-trash fa-lg"></i></a>
+                    </div>
                 `
         let editBtn = html.lastChild.children[0];
         let deleteBtn = html.lastChild.children[1];
-        editBtn.addEventListener('click', editer)
+        editBtn.addEventListener('click', editor)
         deleteBtn.addEventListener('click', deleter)
 
 
