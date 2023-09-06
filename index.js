@@ -65,9 +65,9 @@ function deleter() {
     (this.parentElement.parentElement).remove()
 }
 
-function editor(e) {
-    let h4 = this.parentElement.parentElement.previousSibling.previousSibling.innerHTML;
-    this.parentElement.parentElement.parentElement.innerHTML =
+function editor() {
+    let h4 = this.parentElement.previousSibling.previousSibling.innerHTML;
+    this.parentElement.parentElement.innerHTML =
         `    <input type="text" value="${h4}" class="edited"></input>
                 <div class="btn-container">
                     <a class="update"><i class="fa-solid fa-right-long fa-xl"></i></a>
@@ -85,8 +85,8 @@ function editor(e) {
                     <a class="remove"><i class="fa-solid fa-trash fa-lg"></i></a>
                     </div>
                 `
-        let editBtn = html.lastChild.children[0];
-        let deleteBtn = html.lastChild.children[1];
+        let editBtn = html.children[1].children[0];
+        let deleteBtn = html.children[1].children[1];
         editBtn.addEventListener('click', editor)
         deleteBtn.addEventListener('click', deleter)
 
